@@ -2,6 +2,10 @@
 npm run dev
 
 # 型生成
+## ローカルの場合
+npx supabase gen types typescript --local > database.types.ts
+
+## サーバーの場合
 npx supabase gen types typescript --project-id "${supabase_id}" --schema public > src/types/supabase.ts
 
 詳細
@@ -42,5 +46,14 @@ S3 Region: local
 上記の値を参考にローカルの環境変数に設定する
 フロントで使用するのはAPI URL, anon key
 
-# デプロイは以下参考
+## デプロイは以下参考
 https://supabase.com/docs/guides/functions/deploy
+
+## ローカルのデバッグ
+
+```
+supabase functions serve --inspect-mode brk
+```
+
+以下詳細
+https://supabase.com/docs/guides/functions/debugging-tools
