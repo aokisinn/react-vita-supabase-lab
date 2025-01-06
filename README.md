@@ -41,3 +41,6 @@ S3 Region: local
 
 上記の値を参考にローカルの環境変数に設定する
 フロントで使用するのはAPI URL, anon key
+
+# デプロイは以下参考
+https://supabase.com/docs/guides/functions/deploy
